@@ -16,11 +16,15 @@ class PublicForTestsCompilerPass implements CompilerPassInterface
         }
 
         foreach ($container->getDefinitions() as $definition) {
-            $definition->setPublic(true);
+            if (strpos($definition, 'Ivory\\') !== false) {
+                $definition->setPublic(true);
+            }
         }
 
         foreach ($container->getAliases() as $definition) {
-            $definition->setPublic(true);
+            if (strpos($definition, 'Ivory\\') !== false) {
+                $definition->setPublic(true);
+            }
         }
     }
 
