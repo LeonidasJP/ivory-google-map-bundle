@@ -21,8 +21,12 @@ use Twig\TwigFunction;
  */
 class PlaceAutocompleteExtension extends AbstractExtension
 {
-    public function __construct(private PlaceAutocompleteHelper $placeAutocompleteHelper)
-    {}
+    private PlaceAutocompleteHelper $placeAutocompleteHelper;
+
+    public function __construct(PlaceAutocompleteHelper $placeAutocompleteHelper)
+    {
+        $this->placeAutocompleteHelper = $placeAutocompleteHelper;
+    }
 
     /**
      * {@inheritdoc}

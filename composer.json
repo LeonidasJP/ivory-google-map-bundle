@@ -2,7 +2,10 @@
     "name": "ivory/google-map-bundle",
     "type": "symfony-bundle",
     "description": "Provides a google map integration for Symfony",
-    "keywords": [ "google", "map" ],
+    "keywords": [
+        "google",
+        "map"
+    ],
     "license": "MIT",
     "authors": [
         {
@@ -17,9 +20,9 @@
         }
     ],
     "require": {
-        "php": "^8.1",
-        "symfony/framework-bundle": "^6.4 || ^7.0",
-        "ivory/google-map": "^6.0.1"
+        "php": "^7.4|^8.0|^8.1",
+        "symfony/framework-bundle": "^5.4|^6.4|^7.0",
+        "ivory/google-map": "^3|^4|^5|^6.0.1"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.49",
@@ -27,19 +30,28 @@
         "php-http/guzzle7-adapter": "^1.0",
         "phpunit/phpunit": "^9.6",
         "phpunit/phpunit-selenium": "^9.0",
-        "symfony/cache": "^6.4 || ^7.0",
-        "symfony/form": "^6.4 || ^7.0",
-        "symfony/phpunit-bridge": "^6.4 || ^7.0",
-        "symfony/yaml": "^6.4 || ^7.0",
-        "twig/twig": "^3.8"
+        "symfony/cache": "^5.4|^6.4|^7.0",
+        "symfony/form": "^5.4|^6.4|^7.0",
+        "symfony/phpunit-bridge": "^5.4|^6.4|^7.0",
+        "symfony/yaml": "^5.4|^6.4|^7.0",
+        "twig/twig": "^2|^3.8"
     },
     "autoload": {
-        "psr-4": { "Ivory\\GoogleMapBundle\\": "" }
+        "psr-4": {
+            "Ivory\\GoogleMapBundle\\": ""
+        }
     },
     "autoload-dev": {
-        "psr-4": { "Ivory\\Tests\\GoogleMap\\": "vendor/ivory/google-map/tests" }
+        "psr-4": {
+            "Ivory\\Tests\\GoogleMap\\": "vendor/ivory/google-map/tests"
+        }
     },
     "replace": {
         "egeloen/google-map-bundle": "^3.0.1"
+    },
+    "config": {
+        "platform": {
+            "php": "7.4.33"
+        }
     }
 }

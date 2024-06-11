@@ -20,8 +20,12 @@ use Twig\TwigFunction;
  */
 class ApiExtension extends AbstractExtension
 {
-    public function __construct(private ApiHelper $apiHelper)
-    {}
+    private ApiHelper $apiHelper;
+
+    public function __construct(ApiHelper $apiHelper)
+    {
+        $this->apiHelper = $apiHelper;
+    }
 
     /**
      * {@inheritdoc}
